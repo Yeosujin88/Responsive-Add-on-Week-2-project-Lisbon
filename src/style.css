@@ -2,39 +2,52 @@
 
 body {
   font-family: "Poppins", sans-sarif;
-  background:#272044;
-}
-header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
-    url("../images/lisbon-2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  text-align: center;
-  padding:260px;
+  background: #272044;
 }
 .container {
   max-width: 1400px;
   margin: 0 auto;
 }
+.grid {
+  display: grid;
+
+  grid-gap: 55px;
+}
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-3-columns {
+  grid-template-columns: 1fr 2fr 2fr;
+  margin-left:15px;
+}
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/lisbon-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 200px 0;
+}
+
 header h1 {
   font-weight: 700;
   font-size: 84px;
   line-height: 1;
-  margin:30px 0;
+  margin: 30px 0;
 }
 header h2 {
   font-weight: 400;
   font-size: 40px;
   line-height: 1.5;
-  margin:0;
+  margin: 0;
 }
 header h3 {
   font-weight: 900;
   font-size: 24px;
   line-height: 1.5;
-  letter-spacing:5px;
-  margin:0 auto;
+  letter-spacing: 5px;
+  margin: 0;
 }
 header a {
   font-weight: 700;
@@ -44,65 +57,108 @@ header a {
   text-align: center;
   letter-spacing: 3px;
   text-transform: uppercase;
-background:white;
-text-decoration:none;
+  background: white;
+  text-decoration: none;
   color: #272044;
-  padding:16px 32px;
-  display:inline-block;
-  margin-top:32px;
+  padding: 16px 32px;
+  display: inline-block;
+  margin-top: 32px;
 }
+main {
+  background-color: white;
+}
+main h2 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  color: #272044;
+  opacity: 0.3;
+  text-transform: uppercase;
+  margin: 0;
+}
+main h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #272044;
+  margin: 0;
+}
+main p {
+  padding-right:15px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+img {padding-left:15px;}
 section {
-  max-width:1200px;
-  
+  max-width: 1200px;
+  padding: 100px 0;
   margin: 0 auto;
 }
 footer {
-  color:white;
-  background-image:linear-gradient(rgba(39, 32, 68, 0.9), rgba(39, 32, 68, 0.9)), url("../images/lisbon-footer.png");
-  background-repeat:no-repeat;
-  background-size:cover;
-  padding:100px 0;
+  color: white;
+  background-image: linear-gradient(
+      rgba(39, 32, 68, 0.9),
+      rgba(39, 32, 68, 0.9)
+    ),
+    url("../images/lisbon-footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 footer h3 {
-  font-family: Poppins;
-font-size: 20px;
-font-weight: 700;
-line-height: 30px;
-text-align: left;
-
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
 }
 footer p {
-  font-family: Poppins;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-opacity:0.7;
-
-
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.7;
 }
 footer ul {
-  padding:0;
+  padding: 0;
 }
 footer li {
-  list-style:none;
+  list-style: none;
 }
 footer a {
-  color:white;
-  opacity:0.7;
-  margin:0;
-  padding:0;
+  color: white;
+  opacity: 0.7;
+  margin: 0;
+  padding: 0;
 }
-.grid {
-  display:grid;
-  grid-template-columns: 1fr 2fr 2fr;
-  grid-gap:64px;
-}
-@media (max-width:960px){
-    header {
-        padding:60px 0;
-
-    }
-    h1 {font-size:40px;}
-    h2 {font-size:20px;}
-    h3 {font-size:12px;}
+img {max-width:100%;}
+@media (max-width: 960px) {
+  header {
+    padding: 60px 0;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 12px;
+  }
+  main {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+  .grid {
+    grid-gap: 32px;
+    grid-template-columns: 1fr;
+  }
+  .container {margin:0 auto;}
+  img {
+    max-width:400px;
+    display: block;
+    margin: 0 auto;
+  }
+    
+  main p {padding:0 20px;}
 }
